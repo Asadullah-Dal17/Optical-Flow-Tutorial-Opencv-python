@@ -14,7 +14,7 @@ while True:
     ret, frame = camera.read()
 
     fps = frame_counter/(time.time() - start_time)
-    ap.textBGoutline(frame, f'FPS: {round(fps,1)}', (90, 90), fonts, scaling= 0.7, thickness=1)
+    ap.textBGoutline(frame, f'FPS: {round(fps,1)}', (30, 40), fonts, scaling= 0.5, thickness=1)
     cv.imshow('frame', frame)
     key = cv.waitKey(1)
     if key ==ord('q'):
