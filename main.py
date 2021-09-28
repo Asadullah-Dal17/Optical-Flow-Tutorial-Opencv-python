@@ -13,8 +13,8 @@ while True:
     frame_counter +=1
     ret, frame = camera.read()
 
-    # ap.textBG(frame, 'Computer Vision Test', (40, 40))
-    ap.textBGoutline(frame, 'AiPhile', (90, 90), fonts, scaling= 1.2, thickness=2)
+    fps = frame_counter/(time.time() - start_time)
+    ap.textBGoutline(frame, f'FPS: {round(fps,1)}', (90, 90), fonts, scaling= 0.7, thickness=1)
     cv.imshow('frame', frame)
     key = cv.waitKey(1)
     if key ==ord('q'):
