@@ -14,7 +14,7 @@ while True:
     ret, frame = camera.read()
 
     # ap.textBG(frame, 'Computer Vision Test', (40, 40))
-    ap.textBGoutline(frame, 'AiPhile', (90, 90), fonts, scaling= 2, thickness=4)
+    ap.textBGoutline(frame, 'AiPhile', (90, 90), fonts, scaling= 1.2, thickness=2)
     cv.imshow('frame', frame)
     key = cv.waitKey(1)
     if key ==ord('q'):
